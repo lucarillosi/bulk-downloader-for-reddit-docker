@@ -7,5 +7,5 @@ RUN wget -O release.tar.gz https://github.com/aliparlakci/bulk-downloader-for-re
 RUN tar -xf release.tar.gz -C . --strip-components=1
 RUN rm release.tar.gz
 RUN pip install -r requirements.txt
-RUN python3 -m pip install bdfr
+RUN python3 -m pip install bdfr==2.3.0
 ENTRYPOINT [ "python3", "-m", "bdfr" ]
